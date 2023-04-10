@@ -21,7 +21,7 @@ public class Customer {
 
 @Id
 
-@GeneratedValue(strategy = GenerationType.SEQUENCE)
+@GeneratedValue(strategy = GenerationType.AUTO)
    @JsonProperty
 private  Long Id;
     private  String name;

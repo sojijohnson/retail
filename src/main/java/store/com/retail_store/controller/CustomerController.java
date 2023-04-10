@@ -99,38 +99,10 @@ public class CustomerController {
     @PostMapping("/purchases")
     public ResponseEntity<Purchase> createPurchase(@RequestBody Purchase purchase) {
 
-        walletService.resetCreditLimit();
-        log.info("this is purchase: {}",purchase);
-       Customer customer = customerService.getCustomerById(purchase.getCustomer().getId());
-        Wallet wallet = walletService.getWalletByCustomer(customer);
-        log.info("this is purchase : {}",purchase);
-       //BigDecimal totalAmount = purchase.getProduct().getPrice()(BigDecimal.valueOf(purchase.getQuantity())).multiply();
-
-        Product product = productService.getProductById((purchase.getProduct().getId()));
-        log.info("this is price : {}",purchase.getProduct().getId());
-        log.info("this is quantity : {}",purchase.getQuantity());
-       Double totalAmount = (double) (product.getPrice() * (purchase.getQuantity()));
-       log.info("amount: {}", totalAmount);
-    log.info("some err : {}",wallet);
-        BigDecimal total = BigDecimal.valueOf(totalAmount);
-        //if ((wallet.getBalance() + (totalAmount)).compareTo(wallet.getCreditLimit()) > 0) {
-        if ((wallet.getBalance()<(totalAmount)) ){
-
-
-            throw new IllegalArgumentException("Exceeded credit limit");
-        }
-        // wallet.setBalance(wallet.getBalance().add(totalAmount));
-        wallet.setBalance(wallet.getBalance() -totalAmount);
-        walletService.updateWallet(wallet);
-       purchase.setProduct(productService.getProductById(product.getId()));
-       // Product fjfj;
-        log.info("purchased product id : {}",purchase.getProduct());
-      // (Product) fjfj = purchase.getProduct().getId();
-      // purchase.setProduct(fjfj);
-
+       
 
          purchaseService.createPurchase(purchase);
-        return ResponseEntity.created(URI.create("/api/v1/wallets/ " + purchase.getCustomer())).body(purchase);
+        return ResponseEntity.created(URI.create("/api/v1/purchases/" + purchase.getId())).body(purchase);
         //return ResponseEntity<Purchase>("jjj",HttpStatus.BAD_REQUEST);
 
 
