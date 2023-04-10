@@ -1,15 +1,12 @@
 package store.com.retail_store.serviceImp;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
-import store.com.retail_store.customer.Product;
+import store.com.retail_store.model.Product;
 import store.com.retail_store.repository.ProductRepository;
 import store.com.retail_store.service.ProductService;
 
 import java.util.List;
-import java.util.NoSuchElementException;
-
 
 
 @Service

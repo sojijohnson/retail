@@ -1,4 +1,4 @@
-package store.com.retail_store.customer;
+package store.com.retail_store.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

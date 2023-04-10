@@ -1,8 +1,7 @@
 package store.com.retail_store.repository;
 
-import jakarta.persistence.Entity;
 import org.springframework.data.jpa.repository.JpaRepository;
-import store.com.retail_store.customer.Purchase;
+import store.com.retail_store.model.Purchase;
 
 import java.util.List;
 

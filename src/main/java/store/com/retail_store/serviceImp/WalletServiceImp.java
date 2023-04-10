@@ -2,8 +2,8 @@ package store.com.retail_store.serviceImp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import store.com.retail_store.customer.Customer;
-import store.com.retail_store.customer.Wallet;
+import store.com.retail_store.model.Customer;
+import store.com.retail_store.model.Wallet;
 import store.com.retail_store.repository.WalletRepository;
 import store.com.retail_store.service.WalletService;
 

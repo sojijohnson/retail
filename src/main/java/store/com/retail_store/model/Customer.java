@@ -1,4 +1,4 @@
-package store.com.retail_store.customer;
+package store.com.retail_store.model;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -9,7 +9,6 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
 
 @Entity
@@ -21,7 +20,7 @@ public class Customer {
 
 @Id
 
-@GeneratedValue(strategy = GenerationType.SEQUENCE)
+@GeneratedValue(strategy = GenerationType.AUTO)
    @JsonProperty
 private  Long Id;
     private  String name;
