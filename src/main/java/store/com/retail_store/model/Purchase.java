@@ -1,20 +1,15 @@
-package store.com.retail_store.customer;
+package store.com.retail_store.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 
 import java.io.Serializable;
-import java.time.Year;
-import java.util.Calendar;
 import java.util.Date;
 @Entity
   // @NamedQuery(name="Purchase.findByYearAndMonth" , query="SELECT * FROM purchase WHERE YEAR(date) = :year AND MONTH(date) = :month")

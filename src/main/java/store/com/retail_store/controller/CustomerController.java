@@ -6,18 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import store.com.retail_store.customer.Customer;
-import store.com.retail_store.customer.Product;
-import store.com.retail_store.customer.Purchase;
-import store.com.retail_store.customer.Wallet;
+import store.com.retail_store.model.Customer;
+import store.com.retail_store.model.Product;
+import store.com.retail_store.model.Purchase;
+import store.com.retail_store.model.Wallet;
 import store.com.retail_store.repository.CustomerRepository;
 import store.com.retail_store.repository.WalletRepository;
 import store.com.retail_store.service.*;
 
-import java.math.BigDecimal;
 import java.net.URI;
 import java.util.List;
-import java.util.Objects;
 
 @Slf4j
 @RestController

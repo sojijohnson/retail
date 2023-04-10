@@ -3,10 +3,10 @@ package store.com.retail_store.serviceImp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import store.com.retail_store.customer.Customer;
-import store.com.retail_store.customer.Product;
-import store.com.retail_store.customer.Purchase;
-import store.com.retail_store.customer.Wallet;
+import store.com.retail_store.model.Customer;
+import store.com.retail_store.model.Product;
+import store.com.retail_store.model.Purchase;
+import store.com.retail_store.model.Wallet;
 import store.com.retail_store.repository.PurchaseRepository;
 import store.com.retail_store.service.CustomerService;
 import store.com.retail_store.service.ProductService;
@@ -66,7 +66,8 @@ import java.util.List;
                  purchase.setYear(year);
                  purchase.setMonth(month);
 
-            return purchaseRepository.save(purchase);
+             purchaseRepository.save(purchase);
+            return purchase;
         }
 
         @Override

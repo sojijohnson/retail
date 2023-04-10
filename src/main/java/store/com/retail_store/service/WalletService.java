@@ -1,9 +1,7 @@
 package store.com.retail_store.service;
 
-import store.com.retail_store.customer.Customer;
-import store.com.retail_store.customer.Wallet;
-
-import java.time.LocalDate;
+import store.com.retail_store.model.Customer;
+import store.com.retail_store.model.Wallet;
 
 public interface WalletService {
 

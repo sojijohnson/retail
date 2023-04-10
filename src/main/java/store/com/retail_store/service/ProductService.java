@@ -1,6 +1,6 @@
 package store.com.retail_store.service;
 
-import store.com.retail_store.customer.Product;
+import store.com.retail_store.model.Product;
 
 import java.util.List;
 

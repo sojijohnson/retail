@@ -2,11 +2,9 @@ package store.com.retail_store.serviceImp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import store.com.retail_store.customer.Payment;
-import store.com.retail_store.customer.Purchase;
+import store.com.retail_store.model.Payment;
 import store.com.retail_store.repository.PaymentRepository;
 import store.com.retail_store.service.PaymentService;
-import store.com.retail_store.service.PurchaseService;
 
 import java.time.LocalDate;
 import java.util.List;

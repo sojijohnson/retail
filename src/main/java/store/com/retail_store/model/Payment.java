@@ -1,4 +1,4 @@
-package store.com.retail_store.customer;
+package store.com.retail_store.model;
 //customer, amount, and date.
 
 import jakarta.persistence.Entity;
