@@ -12,7 +12,7 @@ public class Product {
        // private String productId;
         private String name;
         private double price;
-        @ManyToOne
+       @ManyToOne
         @JoinColumn(name = "vendor_vendor_id")
         private Vendor vendor;
 

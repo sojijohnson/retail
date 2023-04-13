@@ -1,5 +1,6 @@
 package store.com.retail_store.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,10 +13,18 @@ import store.com.retail_store.service.UserService;
 public class UserController {
 
 
+   @Autowired
+  private  UserService userService;
+
+
     @PostMapping("/createuser")
     public String createUser(@RequestBody User user){
-        UserService.createUser(user);
-        return "created";
+
+
+       return userService.createUser(user);
+
+
+       // return "created";
     }
 
 

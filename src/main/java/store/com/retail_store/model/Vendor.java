@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.autoconfigure.web.WebProperties;
@@ -14,12 +15,16 @@ import org.springframework.boot.autoconfigure.web.WebProperties;
 @NoArgsConstructor
 @Data
 @Entity
+@Builder
 public class Vendor {
 
 
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
- private long   vendorID;
+private  Long vendor_Number;
+
+//should be LOng
+ private Long   ID;
 
    private String vendor_Name;
     private String vendor_Address;
